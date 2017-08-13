@@ -1,4 +1,9 @@
 ﻿bower_components/
 docs/docker/
 node_modules/
+src/
+tests/
+Gruntfile.js
+.svn
+.git
 npm-debug.log
