@@ -2,10 +2,12 @@
 	"name": "ludorum-game-mancala",
 	"description": "Mancala board game implementation for Ludorum.",
 	"keywords": [
-		"board game",
-		"game",
-		"artificial intelligence",
-		"game ai"
+		"board-game",
+		"board-game-framework",
+		"artificial-intelligence",
+		"artificial-players",
+		"javascript",
+		"mancala-game"
 	],
 	"version": "0.1.0",
 	"author": {
