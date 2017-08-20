@@ -7,6 +7,12 @@ require.config({ paths: {
 }});
 require(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-mancala'],
 		function (base, Sermat, ludorum, PlayTesterApp, ludorum_game_mancala) { "use strict";
+	window.base = base;
+	window.Sermat = Sermat;
+	window.ludorum = ludorum;
+	window.PlayTesterApp = PlayTesterApp;
+	window.ludorum_game_mancala = ludorum_game_mancala;
+
 	var BasicHTMLInterface = ludorum.players.UserInterface.BasicHTMLInterface;
 
 	/** Custom HTML interface for Mancala.
@@ -78,8 +84,8 @@ require(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-man
 		.playerUCT("", true, Infinity, 1000)
 		.playerAlfaBeta("", true, 3)
 		.playerAlfaBeta("", true, 5)
-		.playerAlfaBeta("Heuristic-\u03b1\u03b2 (4 plies)", true, 3, 'ludorum_game_mancala.Mancala.defaultHeuristic')
-		.playerAlfaBeta("Heuristic-\u03b1\u03b2 (6 plies)", true, 5, 'ludorum_game_mancala.Mancala.defaultHeuristic')
+		.playerAlfaBeta("Heuristic-\u03b1\u03b2 (4 plies)", true, 3, 'ludorum.games.Mancala.heuristics.DEFAULT')
+		.playerAlfaBeta("Heuristic-\u03b1\u03b2 (6 plies)", true, 5, 'ludorum.games.Mancala.heuristics.DEFAULT')
 		.selects(['player0', 'player1'])
 		.button('resetButton', document.getElementById('reset'), APP.reset.bind(APP))
 		.reset();
