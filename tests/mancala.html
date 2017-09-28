@@ -3,7 +3,7 @@
 <html><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="mancala.css"/>
-	<script src="lib/require.js"></script>
+	<script src="../node_modules/requirejs/require.js"  data-main="require-config"></script>
 </head><body>
 	<header>
 		<h1>Mancala</h1>
@@ -11,8 +11,8 @@
 	<div id="container">
 		<div id="board"></div>
 		<div id="controls">
-			<p>North is <select id="player0"></select></p>
-			<p>South is <select id="player1"></select></p>
+			<p><span id="player0-name">Player0</span> is <select id="player0"></select></p>
+			<p><span id="player1-name">Player1</span> is <select id="player1"></select></p>
 			<p><button id="reset">Reset</button></p>
 		</div>
 	</div>

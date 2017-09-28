@@ -1,10 +1,3 @@
-require.config({ paths: {
-	'creatartis-base': './lib/creatartis-base.min',
-	'sermat': './lib/sermat-umd',
-	'ludorum': './lib/ludorum.min',
-	'playtester': './lib/playtester-common',
-	'ludorum-game-mancala': './lib/ludorum-game-mancala'
-}});
 require(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-mancala'],
 		function (base, Sermat, ludorum, PlayTesterApp, ludorum_game_mancala) { "use strict";
 	window.base = base;
@@ -74,14 +67,18 @@ require(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-man
 
 	/** PlayTesterApp initialization.
 	*/
-	base.global.APP = new PlayTesterApp(new ludorum_game_mancala.Mancala(), new MancalaHTMLInterface(),
-		{ bar: document.getElementsByTagName('footer')[0] }, [ludorum_game_mancala]);
+	base.global.APP = new PlayTesterApp(
+		new ludorum_game_mancala.Mancala(),
+		new MancalaHTMLInterface(),
+		{ bar: document.getElementsByTagName('footer')[0] },
+		[ludorum_game_mancala]
+	);
 	APP.playerUI("You")
 		.playerRandom()
-		.playerMonteCarlo("", true, Infinity, 100)
-		.playerMonteCarlo("", true, Infinity, 1000)
-		.playerUCT("", true, Infinity, 100)
-		.playerUCT("", true, Infinity, 1000)
+		.playerMonteCarlo("", true, 10)
+		.playerMonteCarlo("", true, 100)
+		.playerUCT("", true, 10)
+		.playerUCT("", true, 100)
 		.playerAlfaBeta("", true, 3)
 		.playerAlfaBeta("", true, 5)
 		.playerAlfaBeta("Heuristic-\u03b1\u03b2 (4 plies)", true, 3, 'ludorum.games.Mancala.heuristics.DEFAULT')
