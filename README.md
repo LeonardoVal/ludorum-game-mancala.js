@@ -5,7 +5,7 @@
 
 Mancala board game implementation to use with game framework [Ludorum](http://github.com/LeonardoVal/ludorum.js). It currently includes only the [Kalah](http://en.wikipedia.org/wiki/Kalah) variant.
 
-It supports loading with AMD (with [RequireJS](http://requirejs.org/)) or a script tag (sets `ludorum_gamepack` in the global namespace).
+It supports loading with AMD (with [RequireJS](http://requirejs.org/)) or a script tag.
 
 ## License
 
