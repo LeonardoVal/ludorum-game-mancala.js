@@ -8,12 +8,12 @@ module.exports = function (grunt) {
 	require('creatartis-grunt').config(grunt, {
 		sourceNames: ['__prologue__', 'Mancala', 'heuristics', '__epilogue__'],
 		deps: [
-			{ name: 'creatartis-base', id: 'base',
-				path: 'node_modules/creatartis-base/build/creatartis-base.min.js' },
-			{ name: 'sermat', id: 'Sermat',
+			{ id: 'creatartis-base', name: 'base' },
+			{ id: 'sermat', name: 'Sermat',
 				path: 'node_modules/sermat/build/sermat-umd.js' },
-			{ name: 'ludorum', id: 'ludorum',
-				path: 'node_modules/ludorum/build/ludorum.min.js' }
+			{ id: 'ludorum' },
+			{ id: 'playtester', dev: true, module: false,
+		 		path: 'node_modules/ludorum/build/playtester-common.js' }
 		]
 	});
 
