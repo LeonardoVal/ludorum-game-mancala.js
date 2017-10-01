@@ -86,4 +86,6 @@ require(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-man
 		.selects(['player0', 'player1'])
 		.button('resetButton', document.getElementById('reset'), APP.reset.bind(APP))
 		.reset();
+}, function (err) {
+	console.error(err);
 }); // require().
