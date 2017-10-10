@@ -14,7 +14,17 @@ module.exports = function (grunt) {
 			{ id: 'ludorum' },
 			{ id: 'playtester', dev: true, module: false,
 		 		path: 'node_modules/ludorum/build/playtester-common.js' }
-		]
+		],
+		targets: {
+			build_umd: {
+				fileName: 'build/ludorum-game-mancala',
+				wrapper: 'umd'
+			},
+			build_raw: {
+				fileName: 'build/ludorum-game-mancala-raw',
+				wrapper: 'raw'
+			}
+		}
 	});
 
 	grunt.registerTask('default', ['build']);
