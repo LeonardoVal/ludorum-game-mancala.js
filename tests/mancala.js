@@ -1,10 +1,7 @@
-require(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-mancala'],
-		function (base, Sermat, ludorum, PlayTesterApp, ludorum_game_mancala) { "use strict";
-	window.base = base;
-	window.Sermat = Sermat;
-	window.ludorum = ludorum;
-	window.PlayTesterApp = PlayTesterApp;
-	window.ludorum_game_mancala = ludorum_game_mancala;
+require(['require-config'], function (init) { "use strict";
+console.log("Required require-config");//FIXME
+init(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-mancala'],
+	function (base, Sermat, ludorum, PlayTesterApp, ludorum_game_mancala) {
 
 	var BasicHTMLInterface = ludorum.players.UserInterface.BasicHTMLInterface;
 
@@ -86,6 +83,5 @@ require(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-man
 		.selects(['player0', 'player1'])
 		.button('resetButton', document.getElementById('reset'), APP.reset.bind(APP))
 		.reset();
-}, function (err) {
-	console.error(err);
+}); // init()
 }); // require().

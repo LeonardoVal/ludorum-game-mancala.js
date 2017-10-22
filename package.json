@@ -32,6 +32,6 @@
 		"sermat": "~0.0.8"
 	},
 	"devDependencies": {
-		"creatartis-grunt": "~0.0.9"
+		"creatartis-grunt": "~0.0.10"
 	}
 }
