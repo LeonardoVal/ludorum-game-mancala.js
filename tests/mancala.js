@@ -1,5 +1,4 @@
 require(['require-config'], function (init) { "use strict";
-console.log("Required require-config");//FIXME
 init(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-mancala'],
 	function (base, Sermat, ludorum, PlayTesterApp, ludorum_game_mancala) {
 
