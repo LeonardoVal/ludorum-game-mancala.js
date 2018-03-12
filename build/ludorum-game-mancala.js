@@ -49,7 +49,7 @@ var Mancala = exports.Mancala = declare(Game, {
 	/** `makeBoard(seeds, houses)` builds an array for the given amounts of houses and seeds per
 	house. By default 4 seeds and 6 houses per player are assumed.
 	*/
-	makeBoard: function makeBoard(seeds, houses){
+	'dual makeBoard': function makeBoard(seeds, houses){
 		seeds = isNaN(seeds) ? 4 : +seeds;
 		houses = isNaN(houses) ? 6 : +houses;
 		var result = [];
@@ -261,10 +261,6 @@ var Mancala = exports.Mancala = declare(Game, {
 }); // declare Mancala.
 
 // ## Mancala type initialization ##################################################################
-
-/** The `makeBoard` can also be used without an instance of Mancala.
-*/
-Mancala.makeBoard = Mancala.prototype.makeBoard;
 
 /** Adding Mancala to `ludorum.games`.
 */
