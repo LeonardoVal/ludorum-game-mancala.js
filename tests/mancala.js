@@ -69,6 +69,8 @@ init(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-mancal
 		{ bar: document.getElementsByTagName('footer')[0] },
 		[ludorum_game_mancala]
 	);
+	APP.inputHouseCount = document.getElementById('houseCount');
+	APP.inputSeedCount = document.getElementById('seedCount');
 	APP.playerUI("You")
 		.playerRandom()
 		.playerMonteCarlo("", true, 10)
@@ -80,7 +82,14 @@ init(['creatartis-base', 'sermat', 'ludorum', 'playtester', 'ludorum-game-mancal
 		.playerAlfaBeta("Heuristic-\u03b1\u03b2 (4 plies)", true, 3, 'ludorum.games.Mancala.heuristics.DEFAULT')
 		.playerAlfaBeta("Heuristic-\u03b1\u03b2 (6 plies)", true, 5, 'ludorum.games.Mancala.heuristics.DEFAULT')
 		.selects(['player0', 'player1'])
-		.button('resetButton', document.getElementById('reset'), APP.reset.bind(APP))
+		.button('resetButton', document.getElementById('reset'), function () {
+			var houseCount = +APP.inputHouseCount.value || 6,
+				seedCount = +APP.inputSeedCount.value || 4;
+			APP.game = new ludorum_game_mancala.Mancala(null, 
+				ludorum_game_mancala.Mancala.makeBoard(seedCount, houseCount)
+			);
+			APP.reset();
+		})
 		.reset();
 }); // init()
 }); // require().

@@ -42,6 +42,13 @@ footer {
 	color: white;
 }
 
+#houseCount {
+	width: 3em;
+}
+#seedCount {
+	width: 3em;
+}
+
 /* Game board *****************************************************************/
 #board table {
 	border-collapse: collapse;

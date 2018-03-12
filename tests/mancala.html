@@ -11,8 +11,12 @@
 	<div id="container">
 		<div id="board"></div>
 		<div id="controls">
-			<p><span id="player0-name">Player0</span> is <select id="player0"></select></p>
-			<p><span id="player1-name">Player1</span> is <select id="player1"></select></p>
+			<p>
+				House count: <input id="houseCount" type="number" min="3" max="30" value="6"/>
+				Seed count: <input id="seedCount" type="number" min="2" max="10" value="4"/>
+			</p>
+			<p><span id="player0-name">Player North</span> is <select id="player0"></select></p>
+			<p><span id="player1-name">Player South</span> is <select id="player1"></select></p>
 			<p><button id="reset">Reset</button></p>
 		</div>
 	</div>
