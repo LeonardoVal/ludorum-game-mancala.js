@@ -28,7 +28,7 @@
 	],
 	"dependencies": {
 		"creatartis-base": "~0.1.7",
-		"ludorum": "~0.2.1-alpha",
+		"ludorum": "~0.2.1-beta",
 		"sermat": "~0.0.8"
 	},
 	"devDependencies": {
