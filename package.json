@@ -29,9 +29,13 @@
 	"dependencies": {
 		"creatartis-base": "~0.1.7",
 		"ludorum": "~0.2.1-beta",
-		"sermat": "~0.0.8"
+		"sermat": "~0.0.9"
 	},
 	"devDependencies": {
-		"creatartis-grunt": "~0.0.10"
+		"creatartis-grunt": "~0.0.12"
+	},
+	"scripts": {
+		"test": "grunt",
+		"start": "xdg-open tests/mancala.html"
 	}
 }
