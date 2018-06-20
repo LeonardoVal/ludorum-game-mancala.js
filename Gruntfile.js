@@ -24,8 +24,12 @@ module.exports = function (grunt) {
 				fileName: 'build/ludorum-game-mancala-tag',
 				wrapper: 'tag'
 			}
+		},
+		connect: {
+			playtester: 'tests/mancala.html'
 		}
 	});
 
 	grunt.registerTask('default', ['build']);
+	grunt.registerTask('playtest', ['compile', 'connect:playtester']);
 };
