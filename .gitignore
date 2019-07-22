@@ -1,4 +1,6 @@
 ﻿bower_components/
 docs/docker/
+docs/jsdoc/
+docs/jsdoc-conf.json
 node_modules/
 npm-debug.log
